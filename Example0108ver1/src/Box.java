@@ -9,4 +9,11 @@ public class Box {
         return width * height * depth;
     }
 
+    // Установить размеры параллелепипеда
+    void setDim(double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
+    }
+
 }
