@@ -4,16 +4,17 @@ public class Box {
     double height;
     double depth;
 
+    // Это конструктор класса Box
+    Box() {
+        System.out.println("Constructor of class Box");
+        width = 10;
+        height = 10;
+        depth = 10;
+    }
+
     // Вычислить и вернуть объем параллелепипеда
     double volume() {
         return width * height * depth;
-    }
-
-    // Установить размеры параллелепипеда
-    void setDim(double w, double h, double d) {
-        width = w;
-        height = h;
-        depth = d;
     }
 
 }
