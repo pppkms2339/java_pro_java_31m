@@ -15,11 +15,13 @@ public class Main {
         myBox2.height = 6;
         myBox2.depth = 9;
 
-        // Вывести объем первого параллелепипеда
-        myBox1.volume();
+        // Получить объем первого параллелепипеда
+        volume = myBox1.volume();
+        System.out.println("Volume = " + volume);
 
-        // Вывести объем второго параллелепипеда
-        myBox2.volume();
+        // Получить объем второго параллелепипеда
+        volume = myBox2.volume();
+        System.out.println("Volume = " + volume);
     }
 
 }
