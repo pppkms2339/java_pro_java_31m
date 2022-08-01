@@ -5,11 +5,11 @@ public class Box {
     double depth;
 
     // Это конструктор класса Box
-    Box() {
+    Box(double w, double h, double d) {
         System.out.println("Constructor of class Box");
-        width = 10;
-        height = 10;
-        depth = 10;
+        width = w;
+        height = h;
+        depth = d;
     }
 
     // Вычислить и вернуть объем параллелепипеда
