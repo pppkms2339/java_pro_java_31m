@@ -12,6 +12,11 @@ public class Main {
                 employees[i].printInfo();
             }
         }
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i].age > 40) {
+                System.out.println(employees[i]);
+            }
+        }
     }
 
 }

@@ -24,4 +24,16 @@ public class Employee {
         System.out.println(salary);
         System.out.println(age);
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "fullName='" + fullName + '\'' +
+                ", post='" + post + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", salary=" + salary +
+                ", age=" + age +
+                '}';
+    }
 }
