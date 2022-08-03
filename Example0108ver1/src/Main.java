@@ -8,6 +8,9 @@ public class Main {
         System.out.println(obj1.equalTo(obj2));
         System.out.println(obj1.equalTo(obj3));
         //System.out.println(obj1 == obj2);
+
+        // Клонируем объект obj1. obj4 - клон obj1
+        Test obj4 = obj1.copy();
     }
 
 }

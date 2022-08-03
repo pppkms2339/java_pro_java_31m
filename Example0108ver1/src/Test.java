@@ -12,4 +12,9 @@ public class Test {
     boolean equalTo(Test obj) {
         return obj.a == a && obj.b == b;
     }
+
+    // Метод, клонирующий текущий объект
+    Test copy() {
+        return new Test(a, b);
+    }
 }
