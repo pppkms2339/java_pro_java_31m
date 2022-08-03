@@ -1,24 +1,9 @@
 public class Test {
 
-    // Модификаторы доступа:
-    // public, private, protected, default
-    // public - член класса доступен из любого другого кода
-    // private - член класса доступен только внутри этого класса
-    // default - "package-private" член класса доступен только внутри текущего пакета
-    int a;  //default (с полем можно работать внутри пакета)
-    public int b;   // открытый член класса
-    private int c;  // закрытый член класса (с полем можно работать только внутри класса Test)
+    public static int counter = 1;
 
-    // Геттер - используется для получения (чтения) значения поля с
-    public int getC() {
-        return c;
+    public Test() {
+        counter++;
     }
 
-    // Сеттер - используется для установки значения полю с
-    public void setC(int c) {
-        if (c < 0) {
-            // что-то сделать
-        }
-        this.c = c;
-    }
 }
