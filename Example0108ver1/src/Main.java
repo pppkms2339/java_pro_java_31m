@@ -1,10 +1,13 @@
 public class Main {
 
     public static void main(String[] args) {
-        Box myBox1 = new Box();
-        Box myBox2 = new Box(10, 20, 15);
-        Box myBox3 = new Box(10);
-        //Box myBox4 = new Box(10, 2);
+        Test obj1 = new Test(1, 2);
+        Test obj2 = new Test(1, 2);
+        Test obj3 = new Test(2, 3);
+
+        System.out.println(obj1.equalTo(obj2));
+        System.out.println(obj1.equalTo(obj3));
+        //System.out.println(obj1 == obj2);
     }
 
 }
