@@ -1,12 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
-        // Перегрузка методов - это одна из реализаций полиморфизма
-        Overload obj = new Overload();
-        obj.test();
-        obj.test(1);
-        obj.test(1, 2);
-        obj.test(3.14);
+        Box myBox1 = new Box();
+        Box myBox2 = new Box(10, 20, 15);
+        Box myBox3 = new Box(10);
+        //Box myBox4 = new Box(10, 2);
     }
 
 }
