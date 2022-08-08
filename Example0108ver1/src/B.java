@@ -1,14 +1,10 @@
 // Объявим класс B подклассом класса А
 public class B extends A {
 
-    int k;
-
-    void showk() {
-        System.out.println("k: " + k);
-    }
+    int total;
 
     void sum() {
-        System.out.println("i+j+k = " + (i + j + k));
+        total = i + j;  // ОШИБКА! член j в этом классе недоступен
     }
 
 }

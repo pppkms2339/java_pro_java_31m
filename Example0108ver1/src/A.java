@@ -1,9 +1,11 @@
 public class A {
 
-    int i, j;
+    int i;  // Этот член класса открыт по умолчанию
+    private int j;  // а этот член класса закрыт в классе А
 
-    void showij() {
-        System.out.println("i и j: " + i + " " + j);
+    void setij(int i, int j) {
+        this.i = i;
+        this.j = j;
     }
 
 }
