@@ -1,16 +1,24 @@
 public class Main {
 
     public static void main(String[] args) {
-        ColorPoint pt = new ColorPoint();
-        System.out.println(pt);
+        // Хоть классы и связаны отношением наследования,
+        // мы можем создать независимо объекты обоих этих классов
+        A superObj = new A();
+        B subObj = new B();
 
-        ColorPoint pt2 = new ColorPoint(1.0, 2.4, -12, 260, 45);
-        System.out.println(pt2);
+        // Суперкласс (базовый) класс может использоваться самостоятельно
+        superObj.i = 10;
+        superObj.j = 20;
+        superObj.showij();
 
-        pt2.setR(123);
-        pt2.setG(56);
-        pt2.setB(200);
-        System.out.println(pt2);
+        // Подкласс имеет доступ ко всем открытым (!!!) членам своего
+        // суперкласса
+        subObj.i = 7;
+        subObj.j = 8;
+        subObj.k = 9;
+        subObj.showij();
+        subObj.showk();
+        subObj.sum();
     }
 
 }
