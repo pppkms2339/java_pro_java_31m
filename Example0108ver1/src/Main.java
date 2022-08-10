@@ -2,31 +2,23 @@ public class Main {
 
     public static void main(String[] args) {
         // Динамическая диспетчеризация методов
-
-        A a = new A();
-        a.test();
-        B b = new B();
-        b.test();
-        C c = new C();
-        c.test();
+        Cube cube1 = new Cube();
+        cube1.draw();
+        Sphere sphere1 = new Sphere();
+        sphere1.draw();
+        Pyramid pyramid1 = new Pyramid();
+        pyramid1.draw();
 
         System.out.println();
 
-        // По ссылке на разные типы объектов будут вызываться разные
-        // варианты переопределенного метода. Иначе говоря, вариант
-        // переопределенного метода выбирается для выполнения в зависимиости
-        // от типа объекта, на который делается ссылка, а не типа ссылочной
-        // переменной.
+        DrawObj[] drawObjs = new DrawObj[3];
+        drawObjs[0] = cube1;
+        drawObjs[1] = sphere1;
+        drawObjs[2] = pyramid1;
+        for (int i = 0; i < drawObjs.length; i++) {
+            drawObjs[i].draw();
+        }
 
-        A ref;  // Переменная ссылочного типа из базового класса А
-        ref = a;
-        ref.test();
-
-        ref = b;
-        ref.test();
-
-        ref = c;
-        ref.test();
 
     }
 
