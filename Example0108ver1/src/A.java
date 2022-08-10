@@ -6,6 +6,12 @@ public class A {
         this.j = j;
     }
 
+    // Перегруженный конструктор
+    public A() {
+        this.i = 0;
+        this.j = 0;
+    }
+
     void show() {
         System.out.println("i = " + i + ", j = " + j);
     }
