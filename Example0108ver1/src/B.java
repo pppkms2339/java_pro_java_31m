@@ -14,4 +14,12 @@ public class B extends A {
         super.show();   // Здесь вызывается метод show() из класса А
         System.out.println("k = " + k);
     }
+
+    @Override
+    public String toString() {
+        String superString = super.toString();
+        return "B{" +
+                "k=" + k +
+                "} " + superString;
+    }
 }

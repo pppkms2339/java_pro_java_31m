@@ -9,4 +9,12 @@ public class A {
     void show() {
         System.out.println("i = " + i + ", j = " + j);
     }
+
+    @Override
+    public String toString() {
+        return "A{" +
+                "i=" + i +
+                ", j=" + j +
+                '}';
+    }
 }
