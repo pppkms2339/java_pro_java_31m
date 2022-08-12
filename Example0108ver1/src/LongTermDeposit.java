@@ -1,7 +1,7 @@
 public class LongTermDeposit extends Deposit {
 
-    public LongTermDeposit(String holderName, double depositAmount) {
-        super(holderName, depositAmount);
+    public LongTermDeposit(Branch branch, String holderName, double depositAmount) {
+        super(branch, holderName, depositAmount);
     }
 
     @Override

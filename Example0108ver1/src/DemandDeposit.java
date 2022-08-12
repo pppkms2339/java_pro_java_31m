@@ -1,7 +1,7 @@
 public class DemandDeposit extends Deposit {
 
-    public DemandDeposit(String holderName, double depositAmount) {
-        super(holderName, depositAmount);
+    public DemandDeposit(Branch branch, String holderName, double depositAmount) {
+        super(branch, holderName, depositAmount);
     }
 
     @Override

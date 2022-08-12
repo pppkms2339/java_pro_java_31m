@@ -2,10 +2,19 @@ public class Branch {
 
     private String name;
     private double totalDeposit;
+    private Bank bank;
 
-    public Branch(String name, double totalDeposit) {
+    public Branch(Bank bank, String name) {
+        this.bank = bank;
         this.name = name;
-        this.totalDeposit = totalDeposit;
+    }
+
+    public Bank getBank() {
+        return bank;
+    }
+
+    public void setBank(Bank bank) {
+        this.bank = bank;
     }
 
     public String getName() {
