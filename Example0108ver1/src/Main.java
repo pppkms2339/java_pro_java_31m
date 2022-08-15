@@ -18,6 +18,11 @@ public class Main {
         re2.setBonus(1000);
 
         Employee[] employees = {ce1, ce2, re1, re2};
+        for (int i = 0; i < employees.length; i++) {
+            System.out.println("name: " + employees[i].getFio() + ", salary: " + employees[i].calculateSalary());
+
+        }
+        
         for (Employee e : employees) {
             System.out.println("name: " + e.getFio() + ", salary: " + e.calculateSalary());
         }
