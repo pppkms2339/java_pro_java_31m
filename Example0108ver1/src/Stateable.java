@@ -1,8 +1,8 @@
-public interface Stateable {
+public abstract class Stateable {
 
-    int OPEN = 1; // по умолчанию имеют модификатор public static final
-    int CLOSED = 0;
+    public static final int OPEN = 1;
+    public static final int CLOSED = 0;
 
-    void printState(int n);
+    public abstract void printState(int n);
 
 }

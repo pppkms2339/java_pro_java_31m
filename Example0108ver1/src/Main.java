@@ -7,7 +7,7 @@ public class Main {
 
 }
 
-class WaterPipe implements Stateable {
+class WaterPipe extends Stateable {
 
     @Override
     public void printState(int n) {
