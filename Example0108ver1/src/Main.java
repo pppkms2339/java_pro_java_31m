@@ -1,17 +1,11 @@
 public class Main {
 
     public static void main(String[] args) {
-        Book book = new Book("Java. Complete reference", "H.Shildt");
-        book.print();
-        Journal journal = new Journal("Foreign Policy");
-        journal.print();
-
-        Printable[] printables = {book, journal};
-        for (Printable p : printables) {
-            p.print();
-        }
-
-        Printable.read();
+        Calculation c = new Calculation();
+        System.out.println(c.sum(1, 2));
+        System.out.println(c.sum(1, 2, 3));
     }
 
 }
+
+class Calculation implements Calculatable { }
