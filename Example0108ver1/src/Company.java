@@ -1,8 +1,8 @@
-public class Bank {
+public class Company {
 
     private String name;
 
-    public Bank(String name) {
+    public Company(String name) {
         this.name = name;
     }
 

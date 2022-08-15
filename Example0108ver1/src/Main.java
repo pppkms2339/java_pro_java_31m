@@ -1,18 +1,26 @@
 public class Main {
 
     public static void main(String[] args) {
-        LongTermDeposit ltd1 = new LongTermDeposit("John", 5000.0);
-        LongTermDeposit ltd2 = new LongTermDeposit("Ann", 1000.0);
-        LongTermDeposit ltd3 = new LongTermDeposit("Victor", 15000.0);
-        DemandDeposit dd1 = new DemandDeposit("John", 3500.0);
-        DemandDeposit dd2 = new DemandDeposit("Ann", 7500.0);
+        Company company = new Company("TelRan");
 
-        Deposit[] deposits = {ltd1, ltd2, ltd3, dd1, dd2};
+        Department department = new Department("IT", company);
 
-        for (Deposit deposit : deposits) {
-            System.out.println(deposit.getHolderName() + " " + deposit.getDepositAmount() + " " + deposit.calculateDepositAmount(3));
+//        Employee employee = new Employee();
+
+        ContractEmployee ce1 = new ContractEmployee("John", "post1", 123.1, department);
+        ContractEmployee ce2 = new ContractEmployee("Ann", "post2", 1234.1, department);
+        RegularEmployee re1 = new RegularEmployee("Victor", "post3", 456.7, department);
+        RegularEmployee re2 = new RegularEmployee("Helen", "post4", 4567.7, department);
+
+        System.out.println(department.getEmployeesCount());
+
+        re1.setBonus(1000);
+        re2.setBonus(1000);
+
+        Employee[] employees = {ce1, ce2, re1, re2};
+        for (Employee e : employees) {
+            System.out.println("name: " + e.getFio() + ", salary: " + e.calculateSalary());
         }
-
     }
 
 }
