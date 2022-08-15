@@ -10,6 +10,8 @@ public class Main {
         for (Printable p : printables) {
             p.print();
         }
+
+        Printable.read();
     }
 
 }
