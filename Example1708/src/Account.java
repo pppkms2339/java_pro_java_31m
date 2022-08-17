@@ -1,15 +1,15 @@
-public class Account<T> implements Accountable<T> {
+public class Account implements Accountable<String> {
 
-    private T id;
+    private String id;
     private int sum;
 
-    public Account(T id, int sum) {
+    public Account(String id, int sum) {
         this.id = id;
         this.sum = sum;
     }
 
     @Override
-    public T getId() {
+    public String getId() {
         return id;
     }
 
