@@ -1,4 +1,4 @@
-public class Account<T> {
+public class Account<T> implements Accountable<T> {
 
     private T id;
     private int sum;
@@ -8,14 +8,17 @@ public class Account<T> {
         this.sum = sum;
     }
 
+    @Override
     public T getId() {
         return id;
     }
 
+    @Override
     public int getSum() {
         return sum;
     }
 
+    @Override
     public void setSum(int sum) {
         this.sum = sum;
     }
