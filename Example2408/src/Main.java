@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
 
 public class Main {
 
@@ -12,49 +14,25 @@ public class Main {
 
         System.out.println(cats);
 
-        // Цикл с параметром
-        for (int i = 0; i < cats.size(); i++) {
-            if (cats.get(i).getId() == "Barsik") {
-                cats.remove(i);
+        // Получение итератора
+        Iterator<Cat> catIterator = cats.iterator();
+        while (catIterator.hasNext()) {
+            Cat cat = catIterator.next();  // получение очередного кота
+            if (cat.getId() == "Barsik") {
+                //cats.remove(cat);
+                catIterator.remove();
             }
         }
 
         System.out.println(cats);
 
-        // Цикл for-each
-        // Exception in thread "main" java.util.ConcurrentModificationException
-        // Нельзя проводить одновременно перебор коллекции и изменение ее элементов
-//        for (Cat cat : cats) {
-//            if (cat.getId() == "Murzik") {
-//                cats.remove(cat);
-//            }
-//        }
-        // Ситуация тут аналогичная
-//        for (Cat cat : cats) {
-//            cats.add(new Cat("New cat"));
-//        }
-        // Как решить с удалением?
-        Cat deletedCat = null;
-        for (Cat cat : cats) {
-            if (cat.getId() == "Murzik") {
-                deletedCat = cat;
-                break;
-            }
+        // Использование ListIterator-а
+        ListIterator<Cat> listIterator = cats.listIterator(cats.size() - 1);
+        while (listIterator.hasPrevious()) {
+            Cat cat = listIterator.previous();
+            cat.setId("ehfe;adhf;adhf");
+            listIterator.set(cat);
         }
-        cats.remove(deletedCat);
-
-        System.out.println(cats);
-
-        // Решение № 2 - копия всей коллекции (итерация по одной коллекции, а
-        // удаление во второй)
-        ArrayList<Cat> copyCats = new ArrayList<>(cats);
-        for (Cat cat : copyCats) {
-            if (cat.getId() == "Asdf") {
-                cats.remove(cat);
-            }
-        }
-
-        System.out.println(cats);
-
+        
     }
 }
