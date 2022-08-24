@@ -10,20 +10,51 @@ public class Main {
         cats.add(cat3);
         cats.add(new Cat("Asdf"));
 
-        //cats.remove(cat3.getName());    //cats.remove("Qwerty");
+        System.out.println(cats);
+
+        // Цикл с параметром
+        for (int i = 0; i < cats.size(); i++) {
+            if (cats.get(i).getId() == "Barsik") {
+                cats.remove(i);
+            }
+        }
 
         System.out.println(cats);
-        System.out.println("size = " + cats.size());
 
-        cats.remove(1); // Удаление объекта по индексу в этой коллекции
+        // Цикл for-each
+        // Exception in thread "main" java.util.ConcurrentModificationException
+        // Нельзя проводить одновременно перебор коллекции и изменение ее элементов
+//        for (Cat cat : cats) {
+//            if (cat.getId() == "Murzik") {
+//                cats.remove(cat);
+//            }
+//        }
+        // Ситуация тут аналогичная
+//        for (Cat cat : cats) {
+//            cats.add(new Cat("New cat"));
+//        }
+        // Как решить с удалением?
+        Cat deletedCat = null;
+        for (Cat cat : cats) {
+            if (cat.getId() == "Murzik") {
+                deletedCat = cat;
+                break;
+            }
+        }
+        cats.remove(deletedCat);
 
         System.out.println(cats);
-        System.out.println("size = " + cats.size());
 
-        cats.remove(cat3);  // Удаление объекта по имени объекта
+        // Решение № 2 - копия всей коллекции (итерация по одной коллекции, а
+        // удаление во второй)
+        ArrayList<Cat> copyCats = new ArrayList<>(cats);
+        for (Cat cat : copyCats) {
+            if (cat.getId() == "Asdf") {
+                cats.remove(cat);
+            }
+        }
 
         System.out.println(cats);
-        System.out.println("size = " + cats.size());
 
     }
 }
