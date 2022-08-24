@@ -79,5 +79,14 @@ public class Main {
         return answer;
     }
 
+    private static ArrayList<Integer> getArrayList2(int n) {
+        ArrayList<Integer> answer = new ArrayList<>();
+        while (n > 0) {
+            answer.add(0, n % 10);
+            n = n / 10;
+        }
+        return answer;
+    }
+
 
 }
