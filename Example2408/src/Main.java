@@ -4,21 +4,25 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Cat[] cats = {new Cat("Barsik"),
-                new Cat("Murzik"),
-                new Cat("Qwerty"),
-                new Cat("Asdf")};
-        System.out.println(Arrays.toString(cats));
-        cats[1] = null;
-        System.out.println(Arrays.toString(cats));
-        for (int i = 2; i < cats.length; i++) {
-            cats[i - 1] = cats[i];
-            cats[i] = null;
-        }
-        System.out.println(Arrays.toString(cats));
-    }
+        ArrayList<Cat> cats = new ArrayList<>();
+        cats.add(new Cat("Barsik"));
+        cats.add(new Cat("Murzik"));
+        Cat qwerty = new Cat("Qwerty");
+        cats.add(qwerty);
+        cats.add(new Cat("Asdf"));
 
-    private void deleteCat(Cat[] cats, int deleteIndex) {
-        
+        System.out.println(cats);
+        System.out.println("size = " + cats.size());
+
+        cats.remove(1);
+
+        System.out.println(cats);
+        System.out.println("size = " + cats.size());
+
+        cats.remove(qwerty);
+
+        System.out.println(cats);
+        System.out.println("size = " + cats.size());
+
     }
 }
