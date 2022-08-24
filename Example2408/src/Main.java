@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Main {
 
@@ -7,19 +6,21 @@ public class Main {
         ArrayList<Cat> cats = new ArrayList<>();
         cats.add(new Cat("Barsik"));
         cats.add(new Cat("Murzik"));
-        Cat qwerty = new Cat("Qwerty");
-        cats.add(qwerty);
+        Cat cat3 = new Cat("Qwerty");
+        cats.add(cat3);
         cats.add(new Cat("Asdf"));
 
-        System.out.println(cats);
-        System.out.println("size = " + cats.size());
-
-        cats.remove(1);
+        //cats.remove(cat3.getName());    //cats.remove("Qwerty");
 
         System.out.println(cats);
         System.out.println("size = " + cats.size());
 
-        cats.remove(qwerty);
+        cats.remove(1); // Удаление объекта по индексу в этой коллекции
+
+        System.out.println(cats);
+        System.out.println("size = " + cats.size());
+
+        cats.remove(cat3);  // Удаление объекта по имени объекта
 
         System.out.println(cats);
         System.out.println("size = " + cats.size());
