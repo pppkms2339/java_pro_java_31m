@@ -17,6 +17,39 @@ public class Main {
             }
         }
         System.out.println(Arrays.toString(integerArray));
+
+        // Создание итератора для строкового массива
+        ArrayIterator<String> arrayIterator2 = new ArrayIterator<>(new String[]{"qwerty", "asdf"});
+
+        // Тестирование второго способа
+        Iterator<Integer> arrayIterator3 = getIterator(integerArray);
+        while (arrayIterator3.hasNext()) {
+            //...
+        }
+    }
+
+    // Реализация с помощью обобщенного метода, возвращающего Iterator
+    private static <T> Iterator<T> getIterator(T[] array) {
+        return new Iterator<T>() {
+
+            private int count = array.length;;
+            private int index = 0;
+            @Override
+            public boolean hasNext() {
+                return index < count;
+            }
+
+            @Override
+            public T next() {
+                if (index < count) {
+                    return array[index++];
+
+                } else {
+                    System.out.println("No such element!");
+                    return null;
+                }
+            }
+        };
     }
 
 }
