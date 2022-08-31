@@ -1,30 +1,30 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        list.add(6);
-        System.out.println(rotateList(list, 2));
-    }
-
-    private static List<Integer> rotateList(List<Integer> list, int k) {
-        if (k == 0) {
-            return list;
+        Car car1 = new Car("Ferrari", 300);
+        Car car2 = new Car("Ferrari", 300);
+        System.out.println(car1 == car2);
+        // == сравнивает не свойства объектов, а их ссылки
+        Man man1 = new Man(1111222233);
+        Man man2 = new Man(222233);
+        Man man3 = new Man(1111222233);
+        ArrayList<Man> mans = new ArrayList<>();
+        mans.add(man1);
+        mans.add(man2);
+        if(mans.contains(man3)) {
+            System.out.println("Contains");
+        } else {
+            System.out.println("Not contains");
         }
-        int length = list.size();
-        List<Integer> result = new ArrayList<>(length);
-        for (int i = 0; i < length; i++) {
-            result.add(k % length, list.get(i));
-            k++;
-        }
-        return result;
+        // Сравнение строк
+        String s1 = "Tel Ran";
+        String s2 = "Tel Ran";
+        System.out.println(s1 == s2);
+        String s3 = new String("Tel Ran");
+        System.out.println(s1 == s3);
+        System.out.println(s1.equals(s3));
     }
 
 }
