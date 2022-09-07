@@ -1,28 +1,30 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class Main {
     public static void main(String[] args) {
-        Point p1 = new Point();
-        p1.x = 10.0;
-        p1.y = 11.5;
-        System.out.println(p1.hashCode());
-        Point p2 = new Point();
-        p2.x = 10.0;
-        p2.y = 11.5;
-        System.out.println(p1 == p2);
-        System.out.println(p1.equals(p2));
+        Person person1 = new Person("John");
+        Person person2 = new Person("Ann");
+        Person person3 = new Person("Victor");
+        Person person4 = new Person("Anton");
+        ArrayList<Person> people = new ArrayList<>();
+        people.add(person1);
+        people.add(person2);
+        people.add(person3);
+        people.add(person4);
+        System.out.println(people);
+        Collections.sort(people);
+        System.out.println(people);
 
-        double x = 4.0;
-        double y = 4.00000000000001;
-        if (x == y) {
-            System.out.println("x = y");
-        } else {
-            System.out.println("x != y");
-        }
-        // 3.14  3.1415926
-        if (Math.abs(x - y) <= 0.0001) {
-            System.out.println("x = y");
-        } else {
-            System.out.println("x != y");
-        }
+//        ArrayList<String> names = new ArrayList<>();
+//        names.add("John");
+//        names.add("Ann");
+//        names.add("Victor");
+//        names.add("Anton");
+//        System.out.println(names);
+//        Collections.sort(names);
+//        System.out.println(names);
 
     }
 }
