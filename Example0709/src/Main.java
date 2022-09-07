@@ -35,7 +35,7 @@ public class Main {
         System.out.println(messages);
         Collections.sort(messages, mc);
         System.out.println(messages);
-        
+
         Collections.sort(messages, new Comparator<Message>() {
             @Override
             public int compare(Message o1, Message o2) {
